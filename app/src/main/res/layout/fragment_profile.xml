@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presenter.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_rounded"
+        >
+
+        <TextView
+            android:id="@+id/tv_label_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:fontFamily="@font/alata"
+            android:text="Foto de perfil"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_picture_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/tv_label_picture"
+            app:layout_constraintStart_toStartOf="@id/tv_label_picture"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_picture"
+            app:spanCount="3" />
+
+        <TextView
+            android:id="@+id/label_name_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/alata"
+            android:text="Como deseja ser chamado?"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/rcv_picture_user"
+            app:layout_constraintStart_toStartOf="@id/rcv_picture_user"
+            app:layout_constraintTop_toBottomOf="@+id/rcv_picture_user" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name_user"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Digite um nome..."
+            android:layout_marginTop="6dp"
+            app:hintTextColor="@color/primary_color"
+            app:layout_constraintEnd_toEndOf="@id/label_name_user"
+            app:layout_constraintStart_toStartOf="@+id/label_name_user"
+            app:layout_constraintTop_toBottomOf="@+id/label_name_user"
+            app:startIconDrawable="@drawable/ic_baseline_supervised_user_circle_24"
+            app:startIconTint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_name_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/primary_color"
+            android:text="Atualizar"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_name_user"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/main_app_icon"
+            android:layout_margin="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/til_name_user"
+            app:layout_constraintStart_toStartOf="@id/til_name_user"
+            app:layout_constraintTop_toBottomOf="@+id/btn_update" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

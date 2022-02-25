@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presenter.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_rounded"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_user_icon"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@drawable/user_icon_01"
+            app:civ_border_color="#555555"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/alata"
+            android:text="Bem vindo de volta!"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_name_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/civ_user_icon"
+            app:layout_constraintTop_toTopOf="@id/civ_user_icon" />
+
+        <TextView
+            android:id="@+id/tv_name_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/alata"
+            android:text="Continue protegendo suas senhas conosco ${Username}!"
+            android:textAlignment="viewStart"
+            android:textColor="@color/background_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_user_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/civ_user_icon"
+            app:layout_constraintTop_toBottomOf="@id/label_welcome" />
+
+        <TextView
+            android:id="@+id/label_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/alata"
+            android:text="Opções"
+            android:textColor="@color/primary_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/civ_user_icon"
+            app:layout_constraintTop_toBottomOf="@id/civ_user_icon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_options"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/iv_assinatura"
+            app:layout_constraintEnd_toEndOf="@id/label_options"
+            app:layout_constraintStart_toStartOf="@id/label_options"
+            app:layout_constraintTop_toBottomOf="@id/label_options"
+            app:spanCount="2"
+            tools:listitem="@layout/cardview_options" />
+
+        <ImageView
+            android:id="@+id/iv_assinatura"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="?attr/actionBarItemBackground"
+            android:clickable="true"
+            android:maxHeight="90dp"
+            android:src="@drawable/ic_assinatura_name_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcv_options" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

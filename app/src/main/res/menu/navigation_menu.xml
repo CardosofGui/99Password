@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:title="Opções">
+
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/item_home"
+                android:title="Ínicio"
+                />
+            <item
+                android:id="@+id/item_all_passwords"
+                android:title="Todas as senhas"
+                />
+            <item
+                android:id="@+id/item_group_passwords"
+                android:title="Grupos de senhas"
+                />
+            <item
+                android:id="@+id/item_validate_passwords"
+                android:title="Verificar senhas"
+                />
+        </menu>
+
+    </item>
+
+
+    <item
+        android:title="Configurações">
+
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/item_profile"
+                android:title="Perfil"
+                />
+        </menu>
+    </item>
+
+    <item
+        android:title="Sobre o projeto">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/item_developer"
+                android:title="Conheça o programador"
+                />
+        </menu>
+    </item>
+
+</menu>

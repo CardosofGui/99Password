@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presenter.SplashScreen">
+
+    <View
+        android:id="@+id/view_main"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:background="#FD6E26"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:src="@drawable/main_app_icon"
+        app:layout_constraintBottom_toBottomOf="@id/view_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_wave"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_wave"
+        app:layout_constraintTop_toBottomOf="@id/view_main" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/alata"
+        android:padding="16dp"
+        android:text="Inicie o armazenamento de suas senhas no 99Password já! \nGuarde suas senhas e garanta a proteção delas!"
+        android:textAlignment="center"
+        android:textColor="@color/primary_color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_wave" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_color"
+        android:text="Começar"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mtv_label" />
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mtv_label"
+        app:mk_color="@color/primary_color"
+        app:mk_type="Worm"
+        android:id="@+id/loading"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
