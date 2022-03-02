@@ -33,7 +33,7 @@ Em atualização 😍
 ---
 
 ## O que será necessario para utilizar este APP? 📝 <a name="necessary">
-☐ Basta apenas baixar e instalar a [APK]() do app que após isso já será possível o uso sem a necessidade de um cadastro online.
+☐ Basta apenas baixar e instalar a [APK](https://github.com/CardosofGui/99Password/releases/download/1.1/99password_1.1.apk) do app que após isso já será possível o uso sem a necessidade de um cadastro online.
 
 ---
     
