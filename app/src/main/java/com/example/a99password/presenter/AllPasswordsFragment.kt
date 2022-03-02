@@ -130,8 +130,6 @@ class AllPasswordsFragment : Fragment(), PasswordInterface {
         }
 
         if(resultCode == Activity.RESULT_OK && requestCode == updatePasswordRequestCode){
-            Toast.makeText(requireContext(), "Chegou aqui fi", Toast.LENGTH_LONG).show()
-
             val password = Password(idPassword, name!!, email!!, password!!)
 
             passwordViewModel.updatePassword(password)

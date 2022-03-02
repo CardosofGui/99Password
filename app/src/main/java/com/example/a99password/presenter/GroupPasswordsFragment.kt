@@ -232,7 +232,7 @@ class GroupPasswordsFragment : Fragment(), GroupInterface, PasswordInterface {
     }
 
     override fun expandGroupClicK(listPassword: List<Password>?) {
-        if(listPassword == null){
+        if(listPassword.isNullOrEmpty()){
             FancyToast.makeText(requireContext(),"Este grupo não possui nenhuma senha", FancyToast.LENGTH_LONG, FancyToast.INFO,false).show()
             return
         }

@@ -62,7 +62,8 @@ class RegisterGroup : AppCompatActivity(), PasswordInterface {
             val groupPassword = GroupPassword(passwordID, name!!, passwordList)
 
             passwordAdapter.setSelectedList(groupPassword.getListPasswords() ?: arrayListOf())
-            listPasswordSelected = groupPassword.getListPasswords() as ArrayList<Password>
+            listPasswordSelected = if(groupPassword.getListPasswords().isNullOrEmpty()) arrayListOf()
+                    else groupPassword.getListPasswords() as ArrayList<Password>
 
             binding.tieNamePassword.setText(name)
             binding.btnRegister.setText("Atualizar")
